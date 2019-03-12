@@ -4,20 +4,22 @@ const path = require('path'),
     OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
     BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
     StyleLintPlugin = require('stylelint-webpack-plugin'),
-    SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+    SpriteLoaderPlugin = require('svg-sprite-loader/plugin'),
+    webpack = require('webpack');
 
 module.exports = {
     context: __dirname,
     entry: {
         frontend: './src/index.js',
-        customizer: './src/customizer.js'
+        customizer: './src/customizer.js',
+        vendor: ['photoswipe','photoswipe/src/js/ui/photoswipe-ui-default.js']
     },
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: '[name]-bundle.js'
     },
     mode: 'development',
-    devtool: 'cheap-eval-source-map',
+    devtool: 'eval-source-map',
     module: {
         rules: [
             {
@@ -43,7 +45,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(jpe?g|png|gif)$/,
+                test: /\.(jpe?g|png|svg|gif)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -54,7 +56,7 @@ module.exports = {
                     },
                     'img-loader'
                 ]
-            }
+            },
         ]
     },
     plugins: [
@@ -65,6 +67,10 @@ module.exports = {
             files: '**/*.php',
             injectChanges: true,
             proxy: 'http://georgewallace.localhost'
+        }),
+        new webpack.ProvidePlugin({
+            PhotoSwipe: 'photoswipe',
+            PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
         })
     ],
     optimization: {

@@ -20,12 +20,21 @@
 		<?php
 		the_content();
 
+		// Check if flexible content field has rows	
+		if ( have_rows( 'content_blocks' ) ) :
+			// Loop through the rows
+			while ( have_rows('content_blocks') ) : the_row();
+				// Get the template part for the row
+				get_template_part('template-parts/partials/' . get_row_layout() );
+			endwhile;
+		endif;	
+
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'geowallace' ),
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .entry-content -->`
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

@@ -34,6 +34,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Alignments
 # Clearings
 # Widgets
+# Vendor
 # Content
 	## Posts and pages
 	## Comments
@@ -89,6 +90,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Vendor
+--------------------------------------------------------------*/
+@import "vendor/photoswipe/main";
+@import "vendor/photoswipe/default-skin/default-skin";
 
 /*--------------------------------------------------------------
 # Content
