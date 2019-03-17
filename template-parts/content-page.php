@@ -7,17 +7,34 @@
  * @package Geowallace
  */
 
+$right_image = get_field('right_side_image');
+$right_image_class = $right_image ? 'has-right-image': '';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($right_image_class); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php geowallace_post_thumbnail(); ?>
-
 	<div class="entry-content">
-		<?php
+	<?php
+		if( $right_image ) :	
+	?>
+		<div class="right-image">
+			<?php
+				if( $right_image['caption'] === '' ) {
+					echo '<img src="' . $right_image['url'] . '" alt="' . $right_image['alt'] . '">';
+				} else {
+					echo '<figure>';
+						echo '<img src="' . $right_image['url'] . '" alt="' . $right_image['alt'] . '">';
+						echo '<figcaption>' . $right_image['caption'] . '</figcation>';
+					echo '</figure>';	
+				}
+			?>
+		</div>
+	<?php 
+		endif;
+		
 		the_content();
 
 		// Check if flexible content field has rows	
@@ -34,7 +51,7 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->`
+	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

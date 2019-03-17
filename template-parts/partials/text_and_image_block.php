@@ -11,11 +11,15 @@
                     <?php echo $text; ?>
                 </div> 
             <?php endif; ?>
-            <?php if ( $image ) : ?>
-                <div class="image" style="background: url(<?php echo $image['url'] . ')' . ' ' . $image_x_axis . '% ' . $image_y_axis . '% ' ; ?> no-repeat;">
-                    <?php if( $image['alt'] ) : ?>
-                        <span class="screen-reader-text"><?php echo $image['alt']; ?></span>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
+            <?php 
+                if ( $image ) {
+                    echo '<div class="image" style="';
+                    echo 'background-image: url(' . $image['url'] . ');';
+                    echo ' background-position: ' . $image_x_axis . '% ' . $image_y_axis . '%;">';
+                    if( $image['alt'] ) {
+                        echo '<span class="screen-reader-text">' . $image['alt'] . '</span>';
+                    }
+                    echo '</div>';
+                }
+            ?>
         </div>

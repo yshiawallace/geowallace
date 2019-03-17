@@ -18,7 +18,7 @@
                     if( $count === 0 ) :
                 ?>
                     <figure class="gallery__item gallery__item--first" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="<?php echo $url; ?>" data-size="<?php echo $width . 'x' . $height; ?>"><?php echo $img; ?></a>
+                        <a href="<?php echo $url; ?>" data-size="<?php echo $width . 'x' . $height; ?>"><?php echo $thumbnail; ?></a>
                         <?php if( $alt ) : ?>
                             <figcaption itemprop="caption description"><?php echo $alt; ?></figcaption>
                         <?php endif; ?>

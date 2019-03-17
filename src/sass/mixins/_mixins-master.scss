@@ -13,9 +13,15 @@
 
 // Clearfix
 @mixin clearfix() {
-	content: "";
-	display: table;
-	table-layout: fixed;
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+		table-layout: fixed;
+	}
+	&:after {
+		clear: both;
+	}
 }
 
 // Clear after (not all clearfix need this also)
@@ -27,3 +33,14 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Rem with px fallback calculation from px value
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+@mixin fontsize($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+

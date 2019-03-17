@@ -1,0 +1,55 @@
+#masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #fff;
+    transition: all 0.3s;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+
+    @media (min-width: $break-desktopSmall) {
+        height: 90px;
+    }
+
+    .site-branding {
+        float: left;
+
+        .site-title {
+            margin: 25px 0 10px 30px;
+
+            @media (min-width: $break-desktopSmall) {
+                margin: 20px 0 0 30px;
+                float: left;
+            }
+
+            a {
+                display: block;
+            }
+        }
+
+        svg#logo-gw {
+            fill: $color__highlight;
+            width: 200px;
+            height: 37px;
+            transition: all 0.3s;
+
+            @media (min-width: $break-desktopSmall) {
+                width: 290px;
+                height: 51px;
+            }
+        }
+    }
+}
+
+.admin-bar {
+    #masthead {
+        top: 46px;
+        @media (min-width: 783px) {
+            top: 32px;
+        }
+    }
+}

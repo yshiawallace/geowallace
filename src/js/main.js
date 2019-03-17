@@ -202,3 +202,30 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('.gallery');
+
+// Add button elements to mobile 
+( function() {
+    var parentLinks = Array.from(document.querySelectorAll('.menu-item-has-children, .page_item_has_children'));
+    var buttonHtml = '<button class="sub-menu-toggle js-sub-menu-toggle" aria-expanded="false"></button>';
+    
+    parentLinks.forEach(function(el) {
+        el.insertAdjacentHTML('afterbegin', buttonHtml);
+    });
+    
+
+    // Register click events button
+    var button = Array.from(document.querySelectorAll('.js-sub-menu-toggle'));
+
+    button.forEach(function(el) {
+        el.addEventListener('click', function() {
+            if(this.getAttribute('aria-expanded') === 'false') {
+                this.setAttribute('aria-expanded', 'true');
+                this.parentNode.classList.add('toggled-on');
+            } else {
+                this.setAttribute('aria-expanded', 'false');
+                this.parentNode.classList.remove('toggled-on');
+            }
+        });
+    });
+
+} )();
