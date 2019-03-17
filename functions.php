@@ -170,3 +170,65 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * TinyMCE Formats Menu
+ */
+// Callback function to insert 'styleselect' into the $buttons array
+function geowallace_mce_buttons_2( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+// Register our callback to the appropriate filter
+add_filter( 'mce_buttons_2', 'geowallace_mce_buttons_2' );
+
+// Callback function to filter the MCE settings
+function geowallace_mce_before_init_insert_formats( $init_array ) {  
+	// Define the style_formats array
+	$style_formats = array(  
+		// Each array child is a format with it's own settings
+		array(  
+			'title' => 'Heading 1',  
+			'selector' => 'p, h2, h3, h4, h5, h6',  
+			'classes' => 'h1',
+			
+		),  
+		array(  
+			'title' => 'Heading 2',  
+			'selector' => 'p, h1, h3, h4, h5, h6',  
+			'classes' => 'h2',
+			
+		), 
+		array(  
+			'title' => 'Heading 3',  
+			'selector' => 'p, h1, h2, h4, h5, h6',  
+			'classes' => 'h3',
+			
+		),
+		array(  
+			'title' => 'Heading 4',  
+			'selector' => 'p, h1, h2, h3, h5, h6',  
+			'classes' => 'h4',
+			
+		),
+		array(  
+			'title' => 'Heading 5',  
+			'selector' => 'p, h1, h2, h3, h4, h6',  
+			'classes' => 'h5',
+			
+		),
+		array(  
+			'title' => 'Heading 6',  
+			'selector' => 'p, h1, h2, h3, h4, h5',  
+			'classes' => 'h6',
+			
+		),
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'geowallace_mce_before_init_insert_formats' );
