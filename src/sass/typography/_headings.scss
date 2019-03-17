@@ -55,3 +55,12 @@ h5,
 	line-height: 1.1;
 	margin-bottom: 20px;
 }
+
+h6,
+.h6 {
+	font-family: 'Roboto', sans-serif;
+	@include fontsize(22px);
+	font-weight: $font__weight-regular;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}

@@ -54,6 +54,11 @@
     }
 
     &--gallery {
+        margin: 60px 0;
+
+        @media (min-width: $break-desktopSmall) {
+            margin: 80px 0;
+        }
         
         .gallery {
             display: flex;

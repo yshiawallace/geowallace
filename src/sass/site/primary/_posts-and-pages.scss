@@ -54,10 +54,10 @@
 	.entry-content {
 		transition: all 0.3s;
 
-		+p {
-			@include fontsize(22px);
-			line-height: 1.6;
-		}
+		// +p {
+		// 	@include fontsize(22px);
+		// 	line-height: 1.6;
+		// }
 
 		> p, 
 		> h1, 
@@ -73,6 +73,7 @@
 		> blockquote {
 			@media (min-width: $break-tabletSmall) {
 				width: 50%;
+				display: inline-block;
 			}
 		}
 	}
@@ -86,10 +87,10 @@
 			padding-left: 60px;
 		}
 
-		+p {
-			@include fontsize(22px);
-			line-height: 1.6;
-		}
+		// +p {
+		// 	@include fontsize(22px);
+		// 	line-height: 1.6;
+		// }
 
 		figure,
 		img {
