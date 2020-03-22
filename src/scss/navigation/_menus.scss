@@ -65,7 +65,7 @@
 			> a {
 				display: inline-block;
 				vertical-align: middle;
-				padding: 13px 20px 13px 50px;
+				padding: 13px 20px 13px 25px;
 
 				@media (min-width: $break-desktopSmall) {
 					padding: 20px 15px;
@@ -89,7 +89,7 @@
 			&.page_item_has_children {
 
 				> a {
-					padding: 13px 50px 13px 0px;
+					padding: 13px 50px 13px 25px;
 
 					@media screen and (min-width: $break-desktopSmall) {
 						padding: 20px 15px;
@@ -110,12 +110,12 @@
 				}
 
 				.sub-menu-toggle {
-					display: inline-block;
-					vertical-align: middle;
+					position: absolute;
+					right: 0;
 					background: #fff;
 					border-radius: 0;
 					height: 50px;
-					padding: 0 15px;
+					padding: 0 33px;
 
 					@media screen and (min-width: $break-desktopSmall) {
 						display: none;
@@ -194,6 +194,14 @@
 							padding-top: 6px;
 						}
 					}
+
+					li:last-child a {
+						padding-bottom: 15px;
+
+						@media (min-width: $break-desktopSmall) {
+							padding-bottom: inherit;
+						}
+					}
 				}
 
 				&.toggled-on {
@@ -239,7 +247,7 @@
 	right: 0;
 	width: 30px;
 	height: 18px;
-	margin: 30px;
+	margin: 30px 25px;
 	background-color: #fff;
 	border-radius: 0;
 

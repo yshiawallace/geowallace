@@ -120,16 +120,11 @@ add_action( 'widgets_init', 'geowallace_widgets_init' );
  * Enqueue scripts and styles.
  */
 function geowallace_scripts() {
+	$caching_date = '09302019';
 	
-	wp_enqueue_style( 'geowallace-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'geowallace-style', get_template_directory_uri() . '/dist/css/styles.css', array(), $caching_date, 'all' );
 
-	wp_enqueue_script( 'geowallace-navigation', get_template_directory_uri() . '/src/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'geowallace-skip-link-focus-fix', get_template_directory_uri() . '/src/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'geowallace-main-js', get_template_directory_uri() . '/public/frontend-bundle.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'geowallace-photoswipe', get_template_directory_uri() . '/public/vendor-bundle.js', array(), '20151215', true );
+	wp_enqueue_script( 'geowallace-scripts', get_template_directory_uri() . '/dist/js/scripts.min.js', array('customize-preview'), $caching_date, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
