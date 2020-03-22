@@ -30,7 +30,5 @@
   "browserslist": [
     "last 2 versions"
   ],
-  "dependencies": {
-    "photoswipe": "^4.1.3"
-  }
+  "dependencies": {}
 }

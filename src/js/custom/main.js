@@ -1,7 +1,3 @@
-// import PhotoSwipe from 'photoswipe/dist/photoswipe.js';
-// import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default.js';
-const { PhotoSwipe, PhotoSwipeUI_Default } = require('photoswipe');
-
 var initPhotoSwipeFromDOM = function(gallerySelector) {
   // parse slide data (url, title, size ...) from DOM elements
   // (children of gallerySelector)
