@@ -14,11 +14,19 @@
 }
 
 .inner {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
 
     @media (min-width: $break-desktopSmall) {
-        padding: 0 50px;
+        padding: 0 5rem;
+    }
+}
+
+.site-main {
+    margin-top: 3rem;
+
+    @media (min-width: $break-desktopSmall) {
+        margin-top: 4rem;
     }
 }

@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 
 *,
@@ -15,8 +16,8 @@ body {
 hr {
 	background-color: $color__background-hr;
 	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	height: 0.1rem;
+	margin-bottom: 1.5Rem;
 }
 
 @import "lists";
@@ -27,7 +28,7 @@ img {
 }
 
 figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+	margin: 1Rem 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
 @import "tables";

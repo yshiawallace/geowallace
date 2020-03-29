@@ -5,62 +5,62 @@ h1, h2, h3, h4, h5, h6 {
 h1,
 .h1 {
 	font-family: 'Libre Baskerville', serif;
-	@include fontsize(40px);
+	font-size: 2.5rem;
 	font-weight: $font__weight-regular;
-	line-height: 1.1;
-	margin-bottom: 30px;
+	line-height: 1.4;
+	margin-top: 0;
 	@media (min-width: $break-desktopSmall) {
-		@include fontsize(50px);
+		font-size: 3rem;
 	}
 }
 
 h2,
 .h2 {
 	font-family: 'Libre Baskerville', serif;
-	@include fontsize(30px);
+	font-size: 1.6rem;
 	font-weight: $font__weight-regular;
-	line-height: 1.1;
-	margin-bottom: 25px;
+	line-height: 1.4;
+	margin-top: 0;
 	@media (min-width: $break-desktopSmall) {
-		@include fontsize(40px);
+		font-size: 2rem;
 	}
 }
 
 h3,
 .h3 {
 	font-family: 'Libre Baskerville', serif;
-	@include fontsize(20px);
+	font-size: 1.6rem;
 	font-weight: $font__weight-regular;
-	line-height: 1.1;
-	margin-bottom: 20px;
+	line-height: 1.4;
+	margin-top: 0;
 	@media (min-width: $break-desktopSmall) {
-		@include fontsize(30px);
+		font-size: 1.8rem;
 	}
 }
 
 h4,
 .h4 {
 	font-family: 'Libre Baskerville', serif;
-	@include fontsize(18px);
+	font-size: 1.6rem;
 	font-weight: $font__weight-regular;
-	line-height: 1.1;
-	margin-bottom: 20px;
+	line-height: 1.4;
+	margin-top: 0;
 }
 
 h5,
 .h5 {
 	font-family: 'Roboto', sans-serif;
-	@include fontsize(18px);
+	font-size: 1.6rem;
 	font-weight: $font__weight-bold;
-	line-height: 1.1;
-	margin-bottom: 20px;
+	line-height: 1.4;
+	margin-top: 0;
 }
 
 h6,
 .h6 {
 	font-family: 'Roboto', sans-serif;
-	@include fontsize(22px);
+	font-size: 1.6rem;
 	font-weight: $font__weight-regular;
-	line-height: 1.6;
-	margin-bottom: 20px;
+	line-height: 1.4;
+	margin-top: 0;
 }
