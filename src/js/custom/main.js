@@ -201,12 +201,12 @@ initPhotoSwipeFromDOM('.gallery');
 (function() {
   var parentLinks = Array.from(document.querySelectorAll('.menu-item-has-children > a, .page_item_has_children > a'));
   var buttonHtml = '<button class="sub-menu-toggle js-sub-menu-toggle" aria-expanded="false"></button>';
-  console.log(parentLinks);
+
   parentLinks.forEach(function(el) {
     el.addEventListener('mouseenter', function(e) {
-      // console.log(e);
+      console.log(e);
     });
-    //el.insertAdjacentHTML('afterend', buttonHtml);
+    el.insertAdjacentHTML('afterend', buttonHtml);
   });
 
   // Register click events button
