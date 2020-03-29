@@ -1,3 +1,4 @@
+// Initialize Photoswipe
 var initPhotoSwipeFromDOM = function(gallerySelector) {
   // parse slide data (url, title, size ...) from DOM elements
   // (children of gallerySelector)
@@ -26,7 +27,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
       item = {
         src: linkEl.getAttribute('href'),
         w: parseInt(size[0], 10),
-        h: parseInt(size[1], 10)
+        h: parseInt(size[1], 10),
+        title: 'Image Caption'
       };
 
       if (figureEl.children.length > 1) {

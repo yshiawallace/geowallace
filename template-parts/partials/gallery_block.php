@@ -12,7 +12,7 @@
             foreach( $gallery_images as $image ) :
                 $img_id = $image['ID'];
                 $url = $image['url'];
-                $alt = $image['alt'];
+                $caption = $image['caption'];
                 $width = $image['width'];
                 $height = $image['height'];
                 $size = 'full';
@@ -23,8 +23,8 @@
             ?>
                 <figure class="gallery__item gallery__item--first" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                     <a href="<?php echo $url; ?>" data-size="<?php echo $width . 'x' . $height; ?>"><?php echo $thumbnail; ?></a>
-                    <?php if( $alt ) : ?>
-                        <figcaption itemprop="caption description"><?php echo $alt; ?></figcaption>
+                    <?php if( $caption ) : ?>
+                        <figcaption class="gallery__caption" itemprop="caption description"><?php echo $caption; ?></figcaption>
                     <?php endif; ?>
                 </figure>
             <?php
@@ -32,8 +32,8 @@
             ?>  
                 <figure class="gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                     <a href="<?php echo $url; ?>" data-size="<?php echo $width . 'x' . $height; ?>"><?php echo $thumbnail; ?></a>
-                    <?php if( $alt ) : ?>
-                        <figcaption itemprop="caption description"><?php echo $alt; ?></figcaption>
+                    <?php if( $caption ) : ?>
+                        <figcaption class="gallery__caption" itemprop="caption description"><?php echo $caption; ?></figcaption>
                     <?php endif; ?>
                 </figure>          
         <?php
