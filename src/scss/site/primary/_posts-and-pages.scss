@@ -119,22 +119,26 @@
 .has-cover-image {
 
 	.cover-image {
-		position: fixed;
 		display: block;
 		width: 100vw;
 		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 25% 0;
 		margin-top: 8rem;
 		z-index: -100;
+		transition: all 0.3s;
 
 		@media (min-width: $break-desktopSmall) {
 			margin-top: 8.5rem;
+			background-size: contain;
+			background-position: 100% 0;
 		}
 	}
 
 	.site-content {
-		margin-top: 100vh;
-		-webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
-		-moz-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
-		box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+		position: absolute;
+		left: 0;
+		right: 0;
 	}
 }

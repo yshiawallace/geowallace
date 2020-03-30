@@ -62,11 +62,8 @@ $cover_image_class = $cover_image ? 'has-cover-image' : '';
 	</header><!-- #masthead -->
 	<?php
 		if( is_front_page() ) {
-			$cover_image_x_axis = get_field('cover_image_x_axis');
-			$cover_image_y_axis = get_field('cover_image_y_axis');
-
 			if( $cover_image  ) {
-				echo '<div class="cover-image" style="background: url(' . $cover_image['url'] . ') no-repeat ' . $cover_image_x_axis . '% ' . $cover_image_y_axis . '%";></div>';
+				echo '<div class="cover-image" style="background-image: url(' . $cover_image['url'] . ');"></div>';
 			}
 		}
 	?>
