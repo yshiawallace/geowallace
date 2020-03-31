@@ -142,3 +142,8 @@
 		right: 0;
 	}
 }
+
+// Disable right click on photoswipe gallery image
+.pswp__img {
+	pointer-events: none;
+}

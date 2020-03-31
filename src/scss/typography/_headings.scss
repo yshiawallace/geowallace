@@ -4,18 +4,30 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 .h1 {
-	font-family: 'Libre Baskerville', serif;
-	font-size: 2.5rem;
+	font-family: 'Crimson Text', serif;
+	font-size: 2.4rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;
+	text-transform: uppercase;
 	@media (min-width: $break-desktopSmall) {
-		font-size: 3rem;
+		font-size: 2.6rem;
 	}
 }
 
 h2,
 .h2 {
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Crimson Text', serif;
+	font-size: 1.8rem;
+	font-weight: $font__weight-regular;
+	margin-top: 0;
+	@media (min-width: $break-desktopSmall) {
+		font-size: 2.4rem;
+	}
+}
+
+h3,
+.h3 {
+	font-family: 'Crimson Text', serif;
 	font-size: 1.6rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;
@@ -24,20 +36,9 @@ h2,
 	}
 }
 
-h3,
-.h3 {
-	font-family: 'Libre Baskerville', serif;
-	font-size: 1.6rem;
-	font-weight: $font__weight-regular;
-	margin-top: 0;
-	@media (min-width: $break-desktopSmall) {
-		font-size: 1.8rem;
-	}
-}
-
 h4,
 .h4 {
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Crimson Text', serif;
 	font-size: 1.6rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;

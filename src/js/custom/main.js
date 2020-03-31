@@ -135,6 +135,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     options = {
       // define gallery index (for URL)
       galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+      shareEl: false,
 
       getThumbBoundsFn: function(index) {
         // See Options -> getThumbBoundsFn section of documentation for more info
@@ -203,9 +204,6 @@ initPhotoSwipeFromDOM('.gallery');
   var buttonHtml = '<button class="sub-menu-toggle js-sub-menu-toggle" aria-expanded="false"></button>';
 
   parentLinks.forEach(function(el) {
-    el.addEventListener('mouseenter', function(e) {
-      console.log(e);
-    });
     el.insertAdjacentHTML('afterend', buttonHtml);
   });
 
@@ -222,5 +220,19 @@ initPhotoSwipeFromDOM('.gallery');
         this.parentNode.classList.remove('toggled-on');
       }
     });
+  });
+})();
+
+// Disable right click on images
+(function() {
+  var images = Array.from(document.querySelectorAll('img'));
+  images.forEach(image => {
+    image.addEventListener(
+      'contextmenu',
+      function(e) {
+        e.preventDefault();
+      },
+      false
+    );
   });
 })();

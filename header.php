@@ -20,7 +20,7 @@ $cover_image_class = $cover_image ? 'has-cover-image' : '';
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
