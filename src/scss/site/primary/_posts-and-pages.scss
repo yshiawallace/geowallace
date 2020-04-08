@@ -107,7 +107,7 @@
 		}
 
 		figcaption {
-			font-size: 0.8rem;
+			font-size: 1.4rem;
 		}
 	}
 
@@ -116,34 +116,121 @@
 	}
 }
 
-.has-cover-image {
+.home {
 
-	.cover-image {
-		display: block;
-		width: 100vw;
-		height: 100vh;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 25% 0;
-		margin-top: 8rem;
-		z-index: -100;
-		transition: all 0.3s;
+	&.has-cover-image {
 
-		@media (min-width: $break-desktopSmall) {
-			margin-top: 8.5rem;
-			background-size: contain;
-			background-position: 100% 0;
+		.cover-logo-container {
+			display: none;
+		}
+
+		.cover-image {
+			width: 100vw;
+			height: 100vh;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 25% 0;
+			z-index: -100;
+	
+			@media (min-width: $break-desktopSmall) {
+				margin-top: 8.5rem;
+				background-size: contain;
+				background-position: 100% 0;
+			}
+		}
+	
+		.site-content {
+			position: absolute;
+			left: 0;
+			right: 0;
 		}
 	}
 
-	.site-content {
-		position: absolute;
-		left: 0;
-		right: 0;
+    &.is-first-visit {
+		background-color: rgba(0,0,0,1);
+		transition: 4s ease-in-out;
+		
+		.site-header {	
+			transform: translateY(-100%);
+			transition: 6s ease-in-out;
+		}
+
+		.site-footer {
+			display: none;
+		}
+
+		&.has-cover-image {
+
+			.cover-logo-container {
+				opacity: 1;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: flex;
+				width: 100vw;
+				height: 100vh;
+				transition: 1.5s ease-in-out;
+	
+				.cover-logo {
+					position: relative;
+					width: 100%;
+					max-width: 1000px;
+					height: 100%;
+					z-index: 1;
+					left: 50%;
+					transform: translateX(-50%);
+	
+					svg#logo-gw {
+						position: absolute;
+						top: 60%;
+						left: 3rem;
+						right: 3rem;
+						fill: $color__highlight;
+					}
+				}
+			}
+
+			.cover-image {
+				@media (min-width: $break-desktopSmall) {
+					margin-top: 0;	
+					transition: margin-top 2s ease-in-out;
+				}
+			}
+		}
+	}
+	
+	&.animate-homepage {
+		background-color: rgba(0,0,0,0);
+
+		.site-header {
+			transform: translateY(0);
+		}
+
+		.site-footer {
+			display: block;
+		}
+
+		&.has-cover-image {
+			.cover-logo-container {
+				visibility: hidden;
+    			opacity: 0;
+			}
+			.cover-image {
+				@media (min-width: $break-desktopSmall) {
+					margin-top: 8.5rem;	
+				}
+			}
+		}
 	}
 }
 
 // Disable right click on photoswipe gallery image
 .pswp__img {
 	pointer-events: none;
+}
+
+.pswp__caption__center {
+	font-size: 15px !important;
 }

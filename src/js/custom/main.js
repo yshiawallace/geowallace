@@ -236,3 +236,18 @@ initPhotoSwipeFromDOM('.gallery');
     );
   });
 })();
+
+// Remove class from homepage if it is not the first session visit
+(function() {
+  const bodyElement = document.querySelector('body');
+  let hasVisited = sessionStorage.getItem('has-visited');
+
+  if (!hasVisited) {
+    sessionStorage.setItem('has-visited', true);
+    setTimeout(() => {
+      bodyElement.classList.add('animate-homepage');
+    }, 3000);
+  } else {
+    bodyElement.classList.remove('is-first-visit', 'animate-homepage');
+  }
+})();

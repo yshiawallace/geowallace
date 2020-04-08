@@ -22,6 +22,10 @@ function geowallace_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	if ( is_front_page() ) {
+		$classes[] = 'is-first-visit';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'geowallace_body_classes' );

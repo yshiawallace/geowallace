@@ -5,41 +5,41 @@ h1, h2, h3, h4, h5, h6 {
 h1,
 .h1 {
 	font-family: 'Crimson Text', serif;
-	font-size: 2.4rem;
+	font-size: 2.6rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;
 	text-transform: uppercase;
 	@media (min-width: $break-desktopSmall) {
-		font-size: 2.6rem;
+		font-size: 2.8rem;
 	}
 }
 
 h2,
 .h2 {
 	font-family: 'Crimson Text', serif;
-	font-size: 1.8rem;
+	font-size: 2rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;
 	@media (min-width: $break-desktopSmall) {
-		font-size: 2.4rem;
+		font-size: 2.6rem;
 	}
 }
 
 h3,
 .h3 {
 	font-family: 'Crimson Text', serif;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;
 	@media (min-width: $break-desktopSmall) {
-		font-size: 2rem;
+		font-size: 2.2rem;
 	}
 }
 
 h4,
 .h4 {
 	font-family: 'Crimson Text', serif;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;
 }
@@ -47,7 +47,7 @@ h4,
 h5,
 .h5 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: $font__weight-bold;
 	margin-top: 0;
 }
@@ -55,7 +55,7 @@ h5,
 h6,
 .h6 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: $font__weight-regular;
 	margin-top: 0;
 }
