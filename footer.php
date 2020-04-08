@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="inner">
 			<div class="site-info">
-				<p class="copyright">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> George Wallace</p>
+				<p class="copyright">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> George Burton Wallace</p>
 			</div><!-- .site-info -->
 		</div><!-- .inner -->
 	</footer><!-- #colophon -->
