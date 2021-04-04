@@ -23,6 +23,16 @@ $cover_image_class = $cover_image ? 'has-cover-image' : '';
 	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-22947147-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-22947147-1');
+	</script>
 </head>
 
 <body <?php body_class($cover_image_class); ?>>

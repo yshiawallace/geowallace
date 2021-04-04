@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'geowallace_widgets_init' );
  * Enqueue scripts and styles.
  */
 function geowallace_scripts() {
-	$caching_date = '09302019';
+	$caching_date = '04042021';
 	
 	wp_enqueue_style( 'geowallace-style', get_template_directory_uri() . '/dist/css/styles.css', array(), $caching_date, 'all' );
 
